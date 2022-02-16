@@ -18,7 +18,9 @@ SELECT * FROM animals WHERE weight_kg >= '10.4' AND weight_kg <= '17.3';
 
 BEGIN;
 
-ALTER TABLE animals RENAME COLUMN species TO unspecified;
+UPDATE animals
+
+SET species = 'unspecified';
 
 \d animals;
 
