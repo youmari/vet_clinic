@@ -78,6 +78,27 @@ SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
 
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-01-01' GROUP BY species;
 
+UPDATE animals 
+SET species_id = 1 WHERE name LIKE '%mon';
+
+UPDATE animals 
+SET species_id = 2 WHERE species_id IS NULL;
+
+UPDATE animals
+SET owner_id = 1 WHERE name LIKE 'Agumon';
+
+UPDATE animals
+SET owner_id = 2 WHERE name LIKE 'Gabumon' OR name LIKE 'Pikachu'; 
+
+UPDATE animals
+SET owner_id = 3 WHERE name LIKE 'Devimon' OR name like 'Plantmon'; 
+
+UPDATE animals
+SET owner_id = 4 WHERE name LIKE 'Charmander' OR name like 'Squirtle' OR name LIKE 'Blossom';
+
+UPDATE animals
+SET owner_id = 5 WHERE name LIKE 'Angemon' OR name like 'Boarmon';
+
 SELECT owners.full_name, animals.name FROM owners INNER JOIN animals ON owners.id = animals.owner_id WHERE owners.full_name LIKE 'Melody Pond';
 
 SELECT animals.name, species.name FROM species INNER JOIN animals ON species.id = animals.species_id;

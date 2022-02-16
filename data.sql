@@ -25,23 +25,4 @@ VALUES ('Sam Smith', 34),
 INSERT INTO species (name)
 VALUES ('Pokemon'), ('Digimon');
 
-UPDATE animals 
-SET species_id = 1 WHERE name LIKE '%mon';
-
-UPDATE animals 
-SET species_id = 2 WHERE species_id IS NULL;
-
-UPDATE animals
-SET owner_id = 1 WHERE name LIKE 'Agumon';
-
-UPDATE animals
-SET owner_id = 2 WHERE name LIKE 'Gabumon' OR name LIKE 'Pikachu'; 
-
-UPDATE animals
-SET owner_id = 3 WHERE name LIKE 'Devimon' OR name like 'Plantmon'; 
-
-UPDATE animals
-SET owner_id = 4 WHERE name LIKE 'Charmander' OR name like 'Squirtle' OR name LIKE 'Blossom';
-
-UPDATE animals
-SET owner_id = 5 WHERE name LIKE 'Angemon' OR name like 'Boarmon'; 
+ 
