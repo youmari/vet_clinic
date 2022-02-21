@@ -1,8 +1,16 @@
-# curriculum-databases-projects-template
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
+## Vet clinic database: database performance audit
+
+In this project we optimize some slow queries in a postgres database and we achive that using the EXPLAIN ANALYZE to compare the execution times before and after optimization.
+
+## Sample screenshots
+## Before
+ ![screenshot](./screenshots/queriesbefore.png)
+
+ ## After
+  ![screenshot](./screenshots/queriesafter.png)
 
 ## Getting Started
 
@@ -20,6 +28,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - GitHub: [@youmari](https://github.com/youmari)
 - Twitter: [@yf_omari](https://twitter.com/yf_omari)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/yassine-omari-945114190/)
+
+
+👤 **Gbenga**
+
+- GitHub: [@Emmanuel Gbenga](https://github.com/gbengacode)
 
 ## 🤝 Contributing
 

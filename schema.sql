@@ -65,3 +65,12 @@ CREATE TABLE visits (
     FOREIGN KEY (animal_id) REFERENCES animals (id),
     FOREIGN KEY (vet_id) REFERENCES vets (id) 
 );
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+
+-- optimize queries performance 
+
+CREATE INDEX animal_id_index ON visits(animal_id);
+CREATE INDEX vet_id_index ON visits(vet_id);
+CREATE INDEX email_index ON owners(email);
