@@ -5,6 +5,8 @@
 
 In this project we optimize some slow queries in a postgres database and we achive that using the EXPLAIN ANALYZE to compare the execution times before and after optimization.
 
+## Schema diagram 
+  ![screenshot](./screenshots/schema-diagram.png)
 ## Sample screenshots
 ## Before
  ![screenshot](./screenshots/queriesbefore.png)
