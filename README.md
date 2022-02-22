@@ -1,18 +1,12 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Vet clinic database: database performance audit
+## Vet clinic database: Create a database based on a diagram
 
-In this project we optimize some slow queries in a postgres database and we achive that using the EXPLAIN ANALYZE to compare the execution times before and after optimization.
+ In this project we interpret it, and implement the SQL needed to build that database.
 
 ## Schema diagram 
-  ![screenshot](./screenshots/schema-diagram.png)
-## Sample screenshots
-## Before
- ![screenshot](./screenshots/queriesbefore.png)
-
- ## After
-  ![screenshot](./screenshots/queriesafter.png)
+  ![screenshot](./screenshots/clinic_diagram.png)
 
 ## Getting Started
 
