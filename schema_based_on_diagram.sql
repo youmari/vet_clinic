@@ -43,6 +43,7 @@ CREATE TABLE invoices (
   generated_at TIMESTAMP NOT NULL,
   payed_at TIMESTAMP NOT NULL,
   medical_history_id INT NOT NULL
+  FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id)
 );
 
 DROP TABLE IF EXISTS invoice_items ;
@@ -51,7 +52,9 @@ CREATE TABLE invoice_items (
   unit_price DECIMAL NOT NULL,
   total_price DECIMAL NOT NULL,
   invoice_id INT NOT NULL,
-  treatment_id INT NOT NULL
+  treatment_id INT NOT NULL,
+  FOREIGN KEY (invoice_id) REFERENCES invoices(id),
+  FOREIGN KEY (treatment_id) REFERENCES treatments(id)
 );
 
 
