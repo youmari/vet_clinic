@@ -52,11 +52,11 @@ CREATE INDEX medical_history_id_index
  (medical_history_id);
 
 CREATE INDEX medical_history_id_index
-  ON treatments_histories
+  ON treatments_medical_histories
   (medical_history_id)
 
 CREATE INDEX treatment_id_index 
-  ON treatments_histories
+  ON treatments_medical_histories
   (treatment_id)
 
 
