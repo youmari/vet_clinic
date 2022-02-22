@@ -33,3 +33,39 @@ CREATE TABLE treatments (
   type VARCHAR(50) NOT NULL,
   name VARCHAR(50) NOT NULL,
 );
+
+
+CREATE INDEX patient_id_index 
+  ON medical_histories
+  (patient_id);
+
+CREATE INDEX invoices_id_index 
+  ON invoices_items
+  (invoices_id);
+
+CREATE INDEX treatment_id_index 
+  ON invoices_items
+ (treatment_id);
+
+CREATE INDEX medical_history_id_index 
+  ON invoices
+ (medical_history_id);
+
+CREATE INDEX medical_history_id_index
+  ON treatments_histories
+  (medical_history_id)
+
+CREATE INDEX treatment_id_index 
+  ON treatments_histories
+  (treatment_id)
+
+
+
+
+
+
+
+
+
+
+
