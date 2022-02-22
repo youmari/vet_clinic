@@ -19,6 +19,7 @@ CREATE TABLE medical_histories (
 DROP TABLE IF EXISTS treatments_medical_histories;
 
 CREATE TABLE treatments_medical_histories (
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   treatment_id INT NOT NULL,
   medical_history_id INT NOT NULL,
   FOREIGN KEY (treatment_id) REFERENCES treatments (id),
@@ -35,16 +36,35 @@ CREATE TABLE treatments (
 );
 
 
+DROP TABLE IF EXISTS invoices;
+CREATE TABLE invoices (
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  total_amount DECIMAL NOT NULL,
+  generated_at TIMESTAMP NOT NULL,
+  payed_at TIMESTAMP NOT NULL,
+  medical_history_id INT NOT NULL
+);
+
+DROP TABLE IF EXISTS invoice_items ;
+CREATE TABLE invoice_items (
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  unit_price DECIMAL NOT NULL,
+  total_price DECIMAL NOT NULL,
+  invoice_id INT NOT NULL,
+  treatment_id INT NOT NULL
+);
+
+
 CREATE INDEX patient_id_index 
   ON medical_histories
   (patient_id);
 
-CREATE INDEX invoices_id_index 
-  ON invoices_items
-  (invoices_id);
+CREATE INDEX invoice_id_index 
+  ON invoice_items
+  (invoice_id);
 
 CREATE INDEX treatment_id_index 
-  ON invoices_items
+  ON invoice_items
  (treatment_id);
 
 CREATE INDEX medical_history_id_index 
